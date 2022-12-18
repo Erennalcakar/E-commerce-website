@@ -7,12 +7,66 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.popup{
+    width: 400px;
+    background: #0f3959;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s ;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    color: #fff !important;
+}
+
+.popup p{
+    color: #fff;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 section{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: #0f3959;
+    flex-flow: wrap;
 }
 
 section::before{
@@ -24,13 +78,16 @@ section::before{
     height: 100%;
     background:#03a9f4 ;
 }
-
+.new-line{
+    width: 100%;
+}
 .container{
     position: relative;
     min-width: 1100px;
     min-height: 550px;
     display: flex;
     z-index: 1000;
+    margin-bottom: -20%;
 }
 
 .container .contactInfo{
@@ -179,7 +236,6 @@ section::before{
  .wrapper{
     position: relative;
     display: flex;
-    margin-left: 10%;
 }
 
 .wrapper .button{
@@ -302,6 +358,7 @@ section::before{
     .container{
         display: flex;
         flex-direction: column-reverse;
+        margin-bottom: 0px;
     }
 
     .container .contactForm{
@@ -313,6 +370,9 @@ section::before{
         width: 100%;
         height: auto;
         flex-direction: row;
+    }
+    .wrapper{
+        margin-top: 20%
     }
 }
 

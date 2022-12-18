@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/ed93a797e3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
 <section>
     <div class="container">
         <div class="contactInfo">
@@ -59,15 +60,18 @@
                     <span>Write your message here...</span>
                 </div>
                 <div class="inputBox w100">
-                    <input type="submit" value="Send">
+                    <input type="submit" onclick="openPopup()" class="btn" value="Send">
                 </div>
             </div>
+            <div class="popup" id="popup">
+                <img src="image/tick.png">
+                <h2>Thank You!</h2>
+                <p>Your message has reached us. We will get back to you as soon as possible. </p>
+                <button type="btn" onclick="closePopup()" >OK</button>
+            </div>
         </div>
-    </div>
-</section>
-
-
-
+    </div> 
+  <span class="new-line"></span>
     <div class="wrapper">
         <div class="button">
             <div class="icon"><i class="fa-brands fa-facebook"></i></div>
@@ -90,6 +94,23 @@
             <div class="icon"><i class="fa-brands fa-youtube"></i></div>
             <span>YouTube</span>
         </div>
+        </div>
+</section>
+
+
+
+    
         
+<script>
+    let popup = document.getElementById("popup");
+
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+</script>
 </body>
 </html>
