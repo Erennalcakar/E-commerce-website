@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); 
 
 
 * {
@@ -8,205 +8,99 @@
   font-family: "Spartan" sans-serif;
 }
 
-h1 {
-  font-size: 50px;
-  line-height: 64px;
-  color: #222;
+.logo{
+  height: 150px;
+  width: 150px;
+}
+body{
+  background: #f2f2f2;
+
 }
 
-h2 {
-  font-size: 46px;
-  line-height: 54px;
-  color: #222;
+nav{
+  background: #1b1b1b;
+  background-repeat: repeat;
 }
 
-h4 {
-  font-size: 20px;
-  color: #222;
+
+nav::after{
+  content: '';
+  clear: both;
+  display: table;
+
 }
 
-h6 {
-  line-height: 700;
-  font-size: 46px;
-}
-
-p {
-  font-size: 16px;
-}
-
-.section-p1 {
-  padding: 40px 80px;
-}
-
-.section-m1 {
-  margin: 40px 0;
-}
-
-body {
-  width: 100%;
-}
-
-#header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 80px;
-  background-color: #babcc5;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-  z-index: 999;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-
-#navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#navbar li {
+nav ul{
+  float: right;
   list-style: none;
-  padding: 0 20px;
-  font-weight: bold;
-  color: black;
-  list-style: none;
-  font-size: 1.5em;
+  margin-right: 40px;
   position: relative;
+  margin-top: 40px;
+  
 }
 
-#navbar li a {
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 600;
-  color: black;
-  transition: 0.3s ease;
-}
-
-#navbar li a {
-  background-image: linear-gradient(#1095c1, #1095c1);
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: 0.4s;
-}
-#navbar li a:hover,
-#navbar li a.active {
-  background-size: 100% 100%;
-}
-
-h3 {
-  font-family: system-ui, sans-serif;
-  font-size: 3rem;
-  margin: 0;
-  cursor: pointer;
-  padding: 0 0.07em;
-}
-
-#navbar li a.active::after {
-  content: "";
-  width: 30%;
-  height: 2px;
-  text-decoration: none;
-  position: absolute;
-  bottom: -4px;
-  left: 20px;
-}
-
-/*Home Page*/
-#hero {
-  /* background-image: url("image/herobg.jpg"); */
-  height: 90vh;
-  /* width: 100%;*/
-  background-position: top 25% right;
-  background-repeat: no-repeat;
-  /*padding: 80px;
-    margin: auto;
-    display: flex;*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  width: 60%;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  pointer-events: none;
-}
-
-#hero h4 {
-  padding-bottom: 15px;
-  margin-bottom: 10px;
-}
-
-#hero h3 {
-  color: #0a4b61;
-}
-
-#hero button {
-  background-image: url("image/buttons_PNG33.png");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #222;
-  border: 0;
-  padding: 14px 80px 14px 65px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 15px;
-  margin-top: 10px;
-}
-
-#feature{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-left: 10em;
-}
-
-#feature .fe-box {
-  width: 180px;
-  text-align: center;
-  padding: 25px 15px;
-  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.06);
-  border: 1px solid #cce7d0;
-  border-radius: 4px;
-  margin: 15px 20px;
-}
-
-#feature .fe-box:hover {
-  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
-  border: groove #0a4b61;
-}
-
-#feature .fe-box h4 {
+nav ul li{
   display: inline-block;
-  padding: 9px 8px 6px 8px;
-  line-height: 1;
-  border-radius: 4px;
-  color: #088178;
-  background-color: #1f3f49;
-}
-
-#feature .fe-box img{
-  width: 100%;
-  margin-bottom: 10px;
+  background: #1b1b1b;
+  margin: 0 5px;
+  
 
 }
 
-
-
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 18px;
+  padding: 9px 15px;
 }
 
-.mr-5 {
-  margin-right: 5rem;
-}
-.mr-4 {
-  margin-right: 4rem;
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #33ffff,
+              0 0 5px #66ffff;
 }
 
+nav ul ul li a:hover{
+  color:cyan;
+  box-shadow: none
+}
 
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+
+nav ul ul ul{
+  border-bottom: none;
+}
+
+nav ul li:hover > ul{
+  top: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 200px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+nav ul ul li a{
+  line-height: 50px;
+}
+
+nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: 150px;
+}

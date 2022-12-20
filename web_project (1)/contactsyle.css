@@ -65,18 +65,17 @@ section{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #0f3959;
+    background: #3c9b9b;
     flex-flow: wrap;
 }
 
 section::before{
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
-    background:#03a9f4 ;
+    background:#3c9b9b;
 }
 .new-line{
     width: 100%;
@@ -94,6 +93,7 @@ section::before{
     position: absolute;
     top: 40px;
     width: 350px;
+    margin-top: -10%;
     height: calc(100% - 80px);
     background: #0f3959;
     z-index: 1;
@@ -110,6 +110,7 @@ section::before{
     padding: 70px 50px;
     padding-left: 250px;
     margin-left: 150px;
+    margin-top: -10%;
     width: calc(100% - 150px);
     height: 100%;
     background: #fff;
@@ -348,7 +349,7 @@ section::before{
 @media (max-width : 991px){
     section{
         
-        background: #03a9f4;
+        background: #3c9b9b;
     }
 
     section::before{
@@ -364,6 +365,7 @@ section::before{
     .container .contactForm{
         width: 100%;
         height: auto;
+        margin-top: 10%;
     }
 
     .container .contactInfo{
