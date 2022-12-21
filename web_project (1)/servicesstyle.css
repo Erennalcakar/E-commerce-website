@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); 
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title h1{
+    font-size: 50px;
+    color: #222;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.title p{
+    font-size: 20px;
+    color: #8c8c8c;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.services-section{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px auto;
+    text-align: center;
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    min-height: 300px;
+    min-width: 400px;
+}  
+
+.card:hover{
+    background-color: #cfcbcb;
+    transition: 0.5s ease;
+}
+
+.card .icon{
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: #338dc5;
+}
+
+.card h2{
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.card p{
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #686666;
+}
+
+.button{
+    font-size: 17px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #338dc5;
+    padding: 11px 15px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+.button:hover{
+    background-color: rgb(80, 78, 78);
+    transition: 0.5 ease;
+}
+
+@media screen and (max-width: 1400px) {
+    .services-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card{
+        width: 85%;
+        display: flex;
+        margin: 20px 0px;
+    }
+}
