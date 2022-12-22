@@ -26,11 +26,78 @@ const email = document.getElementById("emailInp");
 const username = document.getElementById("userInp");
 const pass = document.getElementById("passInp");
 const submit = document.getElementById("sub_btn");
+let userlink = document.getElementById("userlink");
+let signoutlink = document.getElementById("signoutlink");
+var currentUser = null;
 
 
 function isEmptyOrSpaces(str){
   return str === null || str.match(/^ *$/) !== null;
 }
+
+
+//--------------------------------FUNCTIONS----------------------------------//
+function getUserName(){
+  let keepLoggedIn=localStorage.getItem("keepLoggedIn");
+
+  if(keepLoggedIn=="yes"){
+    currentUser = JSON.parse(localStorage.getItem('user'));
+
+  }
+
+  else{
+    currentUser = JSON.parse(sessionStorage.getItem('user'));
+  }
+}
+
+function Signout(){
+  sessionStorage.removeItem('user');
+  localStorage.removeItem('user');
+  localStorage.removeItem('keepLoggedIn');
+    window.location="index.html";
+    window.location="services.html";
+    window.location="cart.html";
+    window.location="contact.html";
+
+}
+
+
+//---------------------------------WINDOWS LOADS-----------------------------//
+window.onload=function(){
+  getUserName();
+  if(currentUser == null){
+    userlink.innerText="Create New Account";
+    userlink.style.color = "white";
+    userlink.classList.replace("nav-link", "btn");
+    userlink.classList.add("btn-primary");
+    userlink.style.backgroundColor="#1B1B1B";
+    userlink.style.borderColor="#1B1B1B";
+    userlink.href="register.html";
+
+    userlink.innerText="Login";
+    userlink.style.color = "white";
+    userlink.classList.replace("nav-link", "btn");
+    userlink.classList.add("nav-link", "btn-success");
+    userlink.href="login.html";
+
+  }
+
+  else{
+    userlink.innerText= currentUser.username;
+    userlink.style.color = "white";
+    userlink.classList.replace("btn","nav-link" );
+    userlink.classList.add("btn-primary");
+    userlink.href="";
+
+    signoutlink.innerText= "Sign Out";
+    userlink.style.color = "white";
+    signoutlink.classList.replace("btn","nav-link" );
+    signoutlink.classList.add("btn-primary");
+    signoutlink.href="javascrip:Signout()";
+  }
+
+}
+
 
 //-------------------------------VALIDATION---------------------------------//
 
@@ -114,7 +181,23 @@ function AuthenticateUser(){
 
 //---------------------------LOGIN--------------------------//
 function login(user){
-  let keepLoggedIn = document.getElementById('customSwitch1')
+  let keepLoggedIn = document.getElementById('customSwitch1').checked;
+
+  if(!keepLoggedIn){
+    sessionStorage.setItem('user', JSON.stringify(user));
+    window.location="index.html";
+    window.location="services.html";
+    window.location="cart.html";
+    window.location="contact.html";
+  }
+  else{
+    sessionStorage.setItem('keepLoggedIn', 'yes');
+    sessionStorage.setItem('user', JSON.stringify(user));
+    window.location="index.html";
+    window.location="services.html";
+    window.location="cart.html";
+    window.location="contact.html";
+  }
 }
 
 
@@ -133,4 +216,7 @@ function encPass(){
 
 
 //---------------------- ASSIGN ITEMS---------------------///
-submit.addEventListener('click', RegisterUser);
+if(submit){
+  submit.addEventListener('click', RegisterUser);
+  submit.addEventListener('click', AuthenticateUser);
+}
