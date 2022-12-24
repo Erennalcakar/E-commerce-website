@@ -1,0 +1,63 @@
+#productsDiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productcard{
+    border: 1px lightgray solid;
+    height: 530px;
+    width: 290px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: border-color .3s;
+}
+
+.productcard:hover{
+    border: 1px solid #3c9b9b;
+    
+}
+
+.thumb{
+    width: 220px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.detbtns.btn{
+    background-color: rgb(21, 21, 170);
+    color: white;
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+.detbtns.btn:hover{
+   color: rgb(48, 82, 88);
+}
+
+.title{
+    color: darkblue;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    padding-right: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.points{
+    padding: 5px;
+    padding-right: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+@media  screen and(max-width: 768px){
+    #productsDib{
+        justify-content: center;
+    }
+}
+
