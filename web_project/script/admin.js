@@ -196,6 +196,6 @@ function UploadAnImage(imgToUpload, imgNo){
     }
 
 
-selBtn.addEventListener('click', OpenFileDialog);
-addBtn.addEventListener('click', UploadAllImages);
+if(selBtn){selBtn.addEventListener('click', OpenFileDialog);}
+if(addBtn) {addBtn.addEventListener('click', UploadAllImages);}
 

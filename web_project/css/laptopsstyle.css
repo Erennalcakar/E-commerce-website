@@ -21,24 +21,25 @@
 }
 
 .thumb{
-    width: 220px;
+    /* width: 220px; */
+    max-width: 70%;
     height: 160px;
     cursor: pointer;
 }
 
 .detbtns.btn{
-    background-color: rgb(21, 21, 170);
+    background-color: rgba(92,201,217,255);
     color: white;
     width: 90%;
     margin-bottom: 15px;
 }
 
 .detbtns.btn:hover{
-   color: rgb(48, 82, 88);
+   color: rgba(76,165,179,255);
 }
 
 .title{
-    color: darkblue;
+    color: rgba(76,165,179,255);
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
